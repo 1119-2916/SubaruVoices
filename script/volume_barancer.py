@@ -33,7 +33,7 @@ def move():
                 fixed = ''.join(fnames)
                 print('fixing:', fnames)
                 if fixed not in ue_files:
-                    os.system(f'mv fix{file} ../{fixed}')
+                    os.system(f'mv fix{file} ../normalized/{fixed}')
                     break
                 i = i + 1
 
@@ -52,5 +52,6 @@ if __name__ == "__main__":
                 os.system(f'ffmpeg -i {file} -af volume={vol}dB fix{file}')
                 break
     move()
+    os.system(f'ls ../normalized/')
 
 
