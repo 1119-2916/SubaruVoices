@@ -23,7 +23,7 @@ def move():
     print(now_files)
     for file in now_files:
         if file not in ue_files:
-            os.system(f'mv fix{file} ../{file}')
+            os.system(f'mv fix{file} ../normalized/{file}')
         else:
             i = 1
             while (True):

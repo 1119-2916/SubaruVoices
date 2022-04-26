@@ -21,8 +21,6 @@ jobs:
         run: python -V
       - name: Run normalizer
         run: sh ./script/normalize.sh
-      - name: clean up wav files
-        run: sh ./script/cleanUp.sh
       - name: 差分を push
         run: |
           git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
