@@ -41,6 +41,7 @@ def move():
 
 if __name__ == "__main__":
     files = glob.glob('*.wav')
+    print(os.getcwd())
     for file in files:
         # print(f'ffmpeg -i {file} -af volume=10dB {file}')
         # os.system(f'ffmpeg -i {file} -af volume=10dB 10{file}')
